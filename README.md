@@ -2,7 +2,8 @@
 
 Welcome to the **Employee Management System** – a comprehensive web application for managing employee records, handling leave requests, and facilitating communication between employees and admin. 
 
-![Employee Management System](https://via.placeholder.com/1000x300.png?text=Employee+Management+System)
+![Employee Management System](![image](https://github.com/Abhishek1problemsolver/Employee_Management_system/assets/121240970/3ea451af-cd1c-4204-b541-328929c96897)
+)
 
 ## 📋 Table of Contents
 
