@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
 import './App.css';
+import AdminLogin from './Admin/AdminLogin';
+import EmployeeLogin from './Employee/EmployeeLogin';
+import ManagerLogin from './Manager/ManagerLogin';
+import AdminDashboard from './Admin/AdminDashboard';
+import EmployeeDashboard from './Employee/EmployeeDashboard';
+import ManagerDashboard from './Manager/ManagerDashboard';
+const HomePage = () => {
+  const navigate = useNavigate();
+
+  const goToAdminLogin = () => {
+    navigate('/admin-login');
+  };
+
+  return (
+    <div className="container">
+      <h1>Employee Management System</h1>
+      <p>Welcome to the Employee Management System homepage. Please select your role:</p>
+      <div className="options">
+        <button onClick={goToAdminLogin} className="link-button">Admin</button>
+        <Link to="/employee-login" className="link-button">Employee</Link>
+        <Link to="/manager-login" className="link-button">Manager</Link>
+      </div>
+    </div>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/employee-login" element={<EmployeeLogin />} />
+        <Route path="/manager-login" element={<ManagerLogin />} />
+        <Route path="/admin-dashboard/*" element={<AdminDashboard />} />
+        <Route path="/Employee-dashboard/*" element={<EmployeeDashboard />} />
+        <Route path="/Manager-dashboard/*" element={<ManagerDashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
