@@ -27,7 +27,7 @@ Welcome to the **Employee Management System** – a comprehensive web applicatio
 ## 📖 Project Description
 
 The **Employee Management System** is designed to streamline various HR processes within an organization. From adding and managing employee details to processing leave requests and facilitating communication, this system aims to enhance efficiency and reduce administrative overhead.
-Employee Dashboard :![Untitled design](https://github.com/Abhishek1problemsolver/Employee_Management_system/assets/121240970/c911dbbf-e3e9-4d7f-92e5-029e19d54c26)
+
 
 ## ✨ Features
 
